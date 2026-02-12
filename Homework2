@@ -1,0 +1,41 @@
+first_name = input("What is your first name? ").title()
+last_name = input("What is your last name? ").title()
+birth_year = int(input("What is your birth year? "))
+fav_hobby = input("What is your favorite hobby? ").title()
+age = 2026 - birth_year
+
+print("====================================\nUSER PROFILE CARD\n====================================")
+print(f"Name: {first_name} {last_name}")
+print(f"Age: {age}")
+print(f"Favorite Hobby: {fav_hobby}")
+print("------------------------------------\nthank you for creating your profile!\n====================================")
+print("\n")
+
+sentence = input("Enter a sentence ")
+length = len(sentence)
+char_length = len(sentence.replace(" ", ""))
+num_words = sentence.count(" ") + 1
+num_vow = sentence.lower().count("a") + sentence.lower().count("e") + sentence.lower().count("i") + sentence.lower().count("o") + sentence.count("u")
+
+sentence_upper = sentence.upper()
+sentence_lower = sentence.lower()
+reverse = sentence[::-1]
+
+print("=== TEXT ANALYZER ===")
+print(f"Enter a sentence: {sentence}")
+print(f"Total characters (with spaces): {length}")
+print(f"Total characters (without spaces): {char_length}")
+print(f"Number of words: {num_words}")
+print(f"Number of vowels: {num_vow}")
+print(f"Uppercase version: {sentence_upper}")
+print(f"Lowercase version: {sentence_lower}")
+print(f"Reversed: {reverse}")
+if (sentence[0] == sentence[0].upper()):
+    print(f"Starts with capital: Yes")
+else:
+    print(f"Starts with capital: No")
+if ((sentence[-1] or sentence[-1] or sentence[-1]) == "." or "!" or "?"):
+    print("Ends with punctuation: Yes")
+else:
+    print("Ends with punctuation: No")
+ 

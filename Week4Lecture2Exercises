@@ -1,0 +1,55 @@
+text = "Computer Science"
+print(text[0:8])
+print(text[-7:])
+print(text[3:6])
+
+date = "2026-01-27"
+year = date[0:4]
+month = date[6:7]
+day = date[8:10]
+print(f"Year: {year}, Month: {month}, Day: {day}")
+
+# 1. Reverse "Python"
+text1 = "Python"
+reversed1 = text1[::-1]
+print(reversed1) # nohtyP
+
+# 2. Every other character from "programming"
+text2 = "programming"
+every_other = text2[::2]
+print(every_other) # pormin
+
+# 3. Last 3 characters of "Hello, World!" reversed
+text3 = "Hello, World!"
+last_three_reversed = text3[:-4:-1]
+print(last_three_reversed) # !dl
+
+text = "hello world, welcome to PYTHON"
+# Convert to all uppercase
+upper_text = text.upper()
+# Convert to all lowercase
+lower_text = text.lower()
+# Convert to title case
+title_text = text.title()
+print(upper_text) # HELLO WORLD, WELCOME TO PYTHON
+print(lower_text) # hello world, welcome to python
+print(title_text) # Hello World, Welcome To Python
+
+text = "Hello, this is a sample sentence!"
+print(len(text))
+print(text.count("a"))
+print("Hello" in text)
+
+# Messy user input
+name = " JOHN DOE "
+email = " John.Doe@Email.COM "
+phone = " (555) 123-4567 "
+# Clean name: strip whitespace, convert to title case
+clean_name = name.strip().upper()
+# Clean email: strip whitespace, convert to lowercase
+clean_email = email.strip().lower()
+# Clean phone: strip whitespace, remove parentheses and dashes
+clean_phone = phone.strip().replace("(", "").replace(")", "").replace("-", "")
+print(f"Name: {clean_name}") # John Doe
+print(f"Email: {clean_email}") # john.doe@email.com
+print(f"Phone: {clean_phone}") # 555 1234567
