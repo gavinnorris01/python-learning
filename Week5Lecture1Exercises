@@ -1,0 +1,14 @@
+if (age < 13 and rating == "G"):
+    print("Access granted")
+elif (age < 17 and rating == "PG-13"):
+    print("Access granted")
+elif (age >= 18):
+    print("Access granted")
+else:
+    print("Access denied")
+    
+level = "gold" if points >= 100 else "silver"
+
+print(f"Status: {'pass' if score >= 60 else 'fail'}.")
+
+#yes

@@ -1,0 +1,9 @@
+animals = ["cat", "dog", "bird", "fish", "hampster"]
+print(animals[0])
+print(animals[-5])
+print(len(animals))
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+months[1] = "February"
+print(len(months))
+print(months[int(len(months) / 2)])

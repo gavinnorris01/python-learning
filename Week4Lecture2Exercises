@@ -53,3 +53,4 @@ clean_phone = phone.strip().replace("(", "").replace(")", "").replace("-", "")
 print(f"Name: {clean_name}") # John Doe
 print(f"Email: {clean_email}") # john.doe@email.com
 print(f"Phone: {clean_phone}") # 555 1234567
+

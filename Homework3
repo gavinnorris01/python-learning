@@ -1,0 +1,82 @@
+#problem 1:
+int1 = int(input("input an integer"))
+int2 = int(input("input another integer"))
+int3 = int(input("input a third integer"))
+print(int1 < int2 < int3)
+print(not (int1 > int2 or int2 > int3))
+print(int1 <= int2 and int2 <= int3 )
+if ((not (int1 > int2 or int2 > int3)) == (int1 <= int2 and int2 <= int3 )):
+    print("De Morgan's Law applies")
+else:
+    print("De Morgan's Law doesn't apply")
+    
+print("\n")
+    
+#problem 2:
+temp = int(input("What is the current temperature?"))
+rain = input("Is it raining?")
+if (temp > 100):
+    print("EXTREME HEAT WARNING: Stay indoors!")
+elif (temp > 85):
+    if (rain == "yes"):
+        print("Warm rain — watch for flash floods.")
+    else:
+        print("Hot and dry — stay hydrated.")
+elif (temp >= 60 and temp <= 85):
+    if (rain == "yes"):
+        print("Grab an umbrella!")
+    else:
+        print("Nice weather — enjoy your day!")
+elif (temp >= 30 and temp <= 59):
+    print("It's cold — bundle up!")
+else:
+    print("FREEZE WARNING: Roads may be icy!")
+    
+print("\n")
+
+#problem 3:
+name = input("What is your name?")
+score1 = int(input("enter your first score"))
+score2 = int(input("enter your second score"))
+score3 = int(input("enter your third score"))
+average = ((score1 + score2 + score3) / 3)
+
+if (average >= 90):
+    grade = "A"
+elif (average >= 87):
+    grade = "A-"
+elif (average >= 83):
+    grade = "B+"
+elif (average >= 80):
+    grade = "B"
+elif (average >= 77):
+    grade = "B-"
+elif (average >= 73):
+    grade = "C+"
+elif (average >= 70):
+    grade = "C"
+elif (average >= 67):
+    grade = "C-"
+elif (average >= 63):
+    grade = "D+"
+elif (average >= 60):
+    grade = "D"
+else: 
+    grade = "F"
+    
+if (average >= 90):
+    standing = "Dean's List"
+elif (average >= 70):
+    standing = "Good Standing"
+elif (average >= 60):
+    standing = "Academic Probation"
+else:
+    standing = "Academic Suspention"
+    
+print("Student:", name)
+print("Exam 1:", score1)
+print("Exam 2:", score2)
+print("Exam 3:", score3)
+print("Average:", average)
+print("Grade:", grade)
+print("Status:", standing)
