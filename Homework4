@@ -1,0 +1,40 @@
+#Problem 1
+
+num = input("What is your age? ")
+
+try:
+    age = int(num)
+except:
+    print("Error: age is not a number")
+
+matinee = True if input("Is the showing matinee? ") == "yes" else False
+
+if age < 13:
+    group = "Child"
+    if matinee == True:
+        price = "$6.00"
+    else:
+        price = "$8.00"
+elif age < 18:
+    group = "Teen"
+    if matinee == True:
+        price = "$7.00"
+    else:
+        price = "$10.00"
+elif age < 65:
+    group = "Adult"
+    if matinee == True:
+        price = "$8.00"
+    else:
+        price = "$13.00"
+else:
+    group = "Senior"
+    if matinee == True:
+        price = "$6.00"
+    else:
+        price = "$7.00"
+
+print(f"Age group: {group}")
+print(f"Price: {price}")
+
+#Problem 2

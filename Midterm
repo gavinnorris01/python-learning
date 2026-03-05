@@ -1,0 +1,42 @@
+#Question 1
+
+temp = int(input("What temperature is it? "))
+scale = input("Is it Fahrenheit or Celsius? ")
+ 
+if (scale.upper() == "C"):
+    convert = (temp * (9/5)) + 32
+    print(f"{temp}C = {convert}F")
+elif (scale.upper() == "F"):
+    convert = (temp - 32) * (5/9)
+    print(f"{temp}F = {convert}C")
+else:
+    print("Invalid scale.")
+    
+    
+#Question 4
+
+gpa = float(input("What is your GPA? "))
+credits = int(input("How many credit hours do you have? "))
+pre = input("Have you completed the prerequisite course? ")
+
+if (pre == "yes"):
+    prereq = True
+else:
+    prereq = False
+    
+if ((gpa >= 3.5) and (credits >= 60) and (prereq == True)):
+    status = "Approved: You meet all requirements."
+elif ((gpa >= 3.5) and (credits >= 60) and (prereq == False)):
+    status = "Conditionally approved: Complete the prerequisite first."
+elif(gpa >= 3.0) and (credits >= 45):
+    status = "Waitlisted: You may be admitted if space is available."
+elif (gpa >= 2.0):
+    status = "Not eligible yet: Raise your GPA or earn more credits."
+else:
+    status = "Denied: GPA is below minimum threshold."
+    
+print("--- Registration Summary ---")
+print(f"GPA: {gpa}")
+print(f"Credits: {credits}")
+print(f"Prerequisite: {pre}")
+print(f"Status: {status}")

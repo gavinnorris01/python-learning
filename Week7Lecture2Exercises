@@ -1,0 +1,6 @@
+animals = ["cat", "dog", "bird", "dog", "fish"]
+animals.remove("bird")
+print(animals)
+print(animals.pop(3), animals)
+del animals[0]
+print(animals)

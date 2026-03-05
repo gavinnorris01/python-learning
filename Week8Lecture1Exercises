@@ -1,0 +1,10 @@
+for x in [1, 2, 3, 4, 5]:
+    print("Hello!")
+
+colors = ["red", "blue", "green"]
+for color in colors:
+    print(color)
+    
+for day in ["Mon", "Tue", "Wed"]:
+    print(f" {day} is a weekday")
+print("Weekend is coming!")
