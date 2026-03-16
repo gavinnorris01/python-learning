@@ -38,3 +38,143 @@ print(f"Age group: {group}")
 print(f"Price: {price}")
 
 #Problem 2
+
+errors = []
+majors = ["CS", "IT", "CE", "DS"]
+
+id = input("Enter Student ID: ")
+if id[0].isalpha() != True:
+    errors.append("Student ID must start with a letter")
+
+if id[-7:].isdigit() != True:
+    errors.append("Student ID must end with 7 digits")
+
+if len(id) != 8:
+    errors.append("Student ID must be 8 characters long")
+
+name = input("Enter your name: ").strip()
+if len(name) < 2:
+    errors.append("Name must contain at least 2 characters")
+
+try:
+    studentAge = int(input("Enter your age: "))
+    if (studentAge < 16) & (studentAge > 99):
+        errors.append("Student age must be between 16 and 99")
+except:
+    errors.append("Age must be a valid integer")
+    
+major = input("Enter your major: ")
+if major.upper() not in majors:
+    errors.append("Major must be one of: CS, IT, CE, DS")
+
+if len(errors) == 0:
+    print("Profile created successfully!")
+    print(f"Student ID: {id}")
+    print(f"Name: {name}")
+    print(f"Age: {studentAge}")
+    print(f"Major: {major}")
+else:
+    print("Errors found:")
+    for i in errors:
+        print(i)
+        
+#problem 3
+
+print("==============================")
+print("CAMPUS CAFÉ ORDER SYSTEM")
+print("==============================")
+print("1. Coffee - $3.50")
+print("2. Sandwich - $6.00")
+print("3. Salad - $5.50")
+print("4. Combo - $8.00")
+print("5. Exit")
+print("==============================")
+
+choice = int(input("Input your choice (1-5): "))
+
+if choice == 1:
+    size = input("What size do you want?: ")
+    if size == "Small":
+        item = "small coffee"
+        price = 3.50
+    elif size == "Medium":
+        item = "medium coffee"
+        price = 4.50
+    elif size == "Large":
+        item = "large coffee"
+        price = 5.50
+    else:
+        item = "small coffee"
+        price = 3.50
+        print("Size defaulted to small due to incorrect input")
+elif choice == 2:
+    cheese = input("Do you want cheese?: ")
+    if cheese == "yes":
+        item = "sandwich + cheese"
+        price = 6.75
+    else:
+        item = "sandwich"
+        price = 6.00
+elif choice == 3:
+    dressing = input("What dressing do you want?: ")
+    if dressing == "ranch":
+        item = "salad + ranch"
+    elif dressing == "italian":
+        item = "salad + italian"
+    elif dressing == "vinaigrette":
+        item = "salad + vinaigrette"
+    elif dressing == "none":
+        item = "salad"
+    else:
+        item = "salad"
+        print("dressing defaulted to none due to incorrect input")
+elif choice == 4:
+    price = 8.00
+    coffee = input("What size do you want?: ")
+    
+    if coffee == "Small":
+        item1 = "small coffee"
+    elif coffee == "Medium":
+        item1 = "medium coffee"
+        price += 1.00
+    elif coffee == "Large":
+        item1 = "large coffee"
+        price += 2.00
+    else:
+        item1 = "small coffee"
+        print("Size defaulted to small due to incorrect input")
+    
+    sandwich = input("Do you want cheese?: ")
+    if sandwich == "yes":
+        item2 = "sandwich + cheese"
+        price += 0.75
+    else:
+        item2 = "sandwich"
+    
+    item = item1 + item2
+else:
+    print("Order cancelled")
+
+orderName = input("What is your name?: ")
+
+try:
+    amount = int(input("How many?: "))
+    subtotal = price * amount
+except:
+    amount = 1
+
+tax = subtotal * .07
+total = tax + subtotal
+
+print("==============================")
+print("ORDER RECEIPT")
+print("==============================")
+print(f"Customer: {orderName}")
+print(f"Item: {item}")
+print(f"Quantity: {amount}")
+print(f"Unit price: {price}")
+print(f"Subtotal: {subtotal}")
+print(f"Tax (7%): {tax}")
+print(f"Total: {total}")
+print("==============================")
+print("Than you for your order!")
