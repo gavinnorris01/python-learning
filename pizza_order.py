@@ -171,6 +171,6 @@ else:
         else:
             large += 1
     print(f"Personal: {personal}")
-    print(f"Small: {small}")
-    print(f"Medium: {medium}")
-    print(f"Large: {large}")
+    print(f"Medium: {small}")
+    print(f"Large: {medium}")
+    print(f"Party: {large}")
