@@ -1,0 +1,38 @@
+def add_five(n):
+    answer = n + 5
+    # Add return here
+    return answer
+
+result = add_five(10)
+print(result) # Should print 15
+def greet(name):
+    print(f"Hello, {name}!")
+    # Call it here with your name
+greet("gavin")
+
+
+def is_even(n):
+    # Your code here
+    if n % 2 == 0:
+        return True
+    return False
+print(is_even(4)) # Should print True
+print(is_even(7)) # Should print False
+
+# Define double(n) here
+# Call it with 5
+def double(n):
+    n = n * 2
+    print(n)
+    
+double(5)
+
+
+def calculate_average(a, b):
+    total = a + b
+    average = total / 2
+    return(average) # What's wrong?
+    
+result = calculate_average(10, 20)
+print(f"Average is {result}")
+# Should print: "Hi, I'm John Doe and I'm 18 years old."

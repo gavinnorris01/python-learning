@@ -1,0 +1,27 @@
+def divide(dividend, divisor):
+    return dividend / divisor
+# Call with dividend=20, divisor=4 using keywords
+result = divide(dividend=20, divisor=4)
+print(result) # Should print 5.0
+def greet(first, last="User", title=""):
+    print(f"{title} {first} {last}")
+# Mark each as VALID or INVALID:
+# A. greet("John") Valid
+# B. greet(first="John") Valid
+# C. greet("John", "Doe", "Mr.") Valid
+# D. greet(title="Ms.", "Jane") Invalid
+
+
+def register(first_name, last_name, age, email=""):
+    print(f"{first_name} {last_name}, age {age}")
+    if email:
+        print(f"Email: {email}")
+# Call with:
+# - first_name as positional
+# - email as keyword
+# - rest as positional
+register("Bob", "John", "93", email="the.org")
+def configure_game(width, height, fullscreen=False, volume=50, difficulty="normal"):
+    pass
+# Rewrite this confusing call using keywords:
+configure_game(800, 600, fullscreen=True, volume=75, difficulty="hard")

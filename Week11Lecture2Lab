@@ -1,0 +1,6 @@
+while True:
+    a = input("test")
+    if a == "test":
+        break
+    else:
+        
