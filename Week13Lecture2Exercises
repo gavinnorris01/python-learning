@@ -1,0 +1,25 @@
+grades = [78, 92, 85, 91, 88]
+# Sort grades from highest to lowest
+sorted_grades = sorted(grades)
+# Print each grade with its rank (1. 92, 2. 91, etc.)
+for num, grade in enumerate(sorted_grades,1):
+    print(f"{num}. {grade}")
+    
+options = ["New Game", "Load Game", "Settings", "Quit"]
+# Use enumerate to create:
+# 1) New Game
+# 2) Load Game
+# 3) Settings
+# 4) Quit
+# Then use len() to validate input range
+for num, option in enumerate(options, 1):
+    print(f"{num}. {option}")
+    
+products = ["Apple", "Banana", "Orange"]
+prices = [0.50, 0.30, 0.60]
+quantities = [10, 15, 8]
+# Use zip() to calculate total value for each product
+# Print: "Apple: $5.00 (10 × $0.50)"
+print("Reciept:")
+for product, price, quantity in zip(products, prices, quantities):
+    print(f"{product}: ${price * quantity} ({quantity} x {price})")

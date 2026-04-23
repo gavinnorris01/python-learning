@@ -1,0 +1,34 @@
+count = 10
+def display_count():
+    # Print the global count
+    print(count)
+x = 10
+def change_x():
+    # Add a line here
+    global x
+    x = 20  
+    
+    
+balance = 1000
+def withdraw(amount):
+    # Modify to update global balance
+    # Should reduce balance by amount
+    global balance
+    balance -= amount
+withdraw(100)
+print(balance) # Should be 900
+count = 1
+def update_counter():
+    count = 10 # This shadows the global count
+    print(f"Local count: {count}")
+update_counter()
+print(f"Global count: {count}")
+
+
+my_var = "G"
+def outer():
+    my_var = "E"
+    def inner():
+        print(my_var)
+    inner()
+outer()

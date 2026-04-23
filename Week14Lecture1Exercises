@@ -1,0 +1,99 @@
+#averages grades, returs scores, and prints reciept
+def bad_grade_tracker():
+    name = input("Student name: ")
+    scores = []
+    for i in range(3): #gets score
+        s = int(input(f"Exam {i+1} score: "))
+        if s < 0 or s > 100:
+            print("Invalid!")
+            return
+        scores.append(s)
+    avg = sum(scores) / len(scores)
+    if avg >= 90: grade = "A" #determines letter grade
+    elif avg >= 80: grade = "B"
+    elif avg >= 70: grade = "C"
+    elif avg >= 60: grade = "D"
+    else: grade = "F"
+    if avg >= 90: standing = "Dean's List"
+    elif avg >= 70: standing = "Good Standing"
+    elif avg >= 60: standing = "Academic Probation"
+    else: standing = "Academic Warning"
+    print("=" * 30) #prints reciept
+    print(f"Student: {name}")
+    print(f"Scores: {scores}")
+    print(f"Average: {avg:.2f}")
+    print(f"Grade: {grade}")
+    print(f"Standing: {standing}")
+    print("=" * 30)
+    
+
+# Step 1: Get student name
+def get_student_name():
+    name = input("Student name: ")
+    return name
+    
+ 
+ #gets student scores
+def get_student_scores():
+    scores = []
+    for i in range(3): #gets score
+        s = int(input(f"Exam {i+1} score: "))
+        score_is_valid(s)
+        scores.append(s)
+    return scores
+    
+    
+# Step 2: Calculate letter grade
+def calculate_letter_grade(avg):
+    if avg >= 90: grade = "A"
+    elif avg >= 80: grade = "B"
+    elif avg >= 70: grade = "C"
+    elif avg >= 60: grade = "D"
+    else: grade = "F"
+    return grade
+  
+#calculates standing
+def calculate_standing(avg):
+    if avg >= 90: standing = "Dean's List"
+    elif avg >= 70: standing = "Good Standing"
+    elif avg >= 60: standing = "Academic Probation"
+    else: standing = "Academic Warning"
+    return standing
+    
+    
+# Step 3: Display report
+def display_report(name, scores, avg, grade, standing):
+    print(f"Student: {name}")
+    print(f"Scores: {scores}")
+    print(f"Average: {avg:.2f}")
+    print(f"Grade: {grade}")
+    print(f"Standing: {standing}")
+
+def print_divider():
+    print("=" * 30)
+
+def score_is_valid(s):
+    if s < 0 or s > 100:
+        print("Invalid!")
+        return
+    
+
+def calculate_average(scores):
+    avg = sum(scores) / len(scores)
+    return avg
+    
+
+def main():
+    name = get_student_name()
+    scores = get_student_scores()
+    avg = calculate_average(scores)
+    grade = calculate_letter_grade(avg)
+    standing = calculate_standing(avg)
+    display_report(name, scores, avg, grade, standing)
+    
+    
+
+# Create stubs for each function your main() calls.
+# Example:
+# def get_student_name():
+# pass
